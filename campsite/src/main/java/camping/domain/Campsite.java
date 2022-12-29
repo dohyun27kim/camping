@@ -93,23 +93,24 @@ public class Campsite  {
     public static void confirmReservation(ReservationConfirmed reservationConfirmed){
 
         /** Example 1:  new item 
+         **/
+        /*        
         Campsite campsite = new Campsite();
+        campsite.setCampsiteId(reservationConfirmed.getCampsiteId());
+        campsite.setCampsiteStatus("예약됨");
         repository().save(campsite);
-
         */
 
         /** Example 2:  finding and process
-        
-        repository().findById(reservationConfirmed.get???()).ifPresent(campsite->{
+        */        
+        repository().findById(reservationConfirmed.getCampsiteId()).ifPresent(campsite->{
             
-            campsite // do something
+            //campsite // do something
+            campsite.setCampsiteId(reservationConfirmed.getCampsiteId());
+            campsite.setCampsiteStatus("예약됨");
             repository().save(campsite);
-
-
          });
-        */
 
-        
     }
     public static void cancelReservation(ReservationCancelled reservationCancelled){
 
@@ -129,7 +130,13 @@ public class Campsite  {
 
          });
         */
-
+        repository().findById(reservationCancelled.getCampsiteId()).ifPresent(campsite->{
+            
+            //campsite // do something
+            campsite.setCampsiteId(reservationCancelled.getCampsiteId());
+            campsite.setCampsiteStatus("예약가능");
+            repository().save(campsite);
+         });
         
     }
 

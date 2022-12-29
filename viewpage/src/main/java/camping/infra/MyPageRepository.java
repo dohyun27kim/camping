@@ -10,6 +10,8 @@ public interface MyPageRepository extends PagingAndSortingRepository<MyPage, Lon
 
     List<MyPage> findByReservationId(Long reservationId);
 
+    
+
 
     
 }

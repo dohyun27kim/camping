@@ -29,7 +29,7 @@ public class MyPageViewHandler {
             myPage.setReservationId(reservationCreated.getReservationId());
             myPage.setCustomerId(reservationCreated.getCustomerId());
             myPage.setCampsiteId(reservationCreated.getReservationId());
-            myPage.setReservationStatus("요청됨");
+            myPage.setReservationStatus("생성됨");
             // view 레파지 토리에 save
             myPageRepository.save(myPage);
 
@@ -69,7 +69,7 @@ public class MyPageViewHandler {
                 List<MyPage> myPageList = myPageRepository.findByReservationId(reservationConfirmed.getReservationId());
                 for(MyPage myPage : myPageList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
-                    myPage.setReservationStatus("확정됨");
+                    myPage.setReservationStatus("결제됨");
                 // view 레파지 토리에 save
                 myPageRepository.save(myPage);
                 }

@@ -67,6 +67,12 @@ public class Reservation  {
 
         camping.external.Payment payment = new camping.external.Payment();
         // mappings goes here
+        payment.setCompsiteId(getCampsiteId());
+        payment.setPayId(getPayId());
+        payment.setPaymentStatus(getReservationStatus());
+        payment.setReservationId(getReservationId());
+
+
         ReservationApplication.applicationContext.getBean(camping.external.PaymentService.class)
             .approvePayment(payment);
 
@@ -120,7 +126,7 @@ public class Reservation  {
         repository().findById(paymentApproved.getReservationId()).ifPresent(reservation->{
             
             //reservation // do something
-            reservation.setPayId(paymentApproved.getPayId());
+            //reservation.setPayId(paymentApproved.getPayId());
             reservation.setReservationStatus("결재됨");
             repository().save(reservation);
 
@@ -151,7 +157,7 @@ public class Reservation  {
         repository().findById(paymentCancelled.getReservationId()).ifPresent(reservation->{
             
             //reservation // do something
-            reservation.setReservationId(paymentCancelled.getReservationId());  //질문거리 !!
+            //reservation.setReservationId(paymentCancelled.getReservationId());  //질문거리 !!
             reservation.setPayId(paymentCancelled.getPayId());  //질문거리 !!
             reservation.setReservationStatus("취소됨");
             repository().save(reservation);

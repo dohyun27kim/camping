@@ -85,6 +85,16 @@ public class Payment  {
          });
         */
 
+        repository().findById(reservationCancelRequested.getPayId()).ifPresent(payment->{
+            
+            // do something
+            payment.setPayId(reservationCancelRequested.getPayId());
+            payment.setPaymentStatus("결제취소");
+            repository().save(payment);
+
+
+         });
+
         
     }
 

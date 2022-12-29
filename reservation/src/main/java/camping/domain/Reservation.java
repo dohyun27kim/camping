@@ -151,7 +151,8 @@ public class Reservation  {
         repository().findById(paymentCancelled.getReservationId()).ifPresent(reservation->{
             
             //reservation // do something
-            reservation.setPayId(paymentCancelled.getPayId());
+            reservation.setReservationId(paymentCancelled.getReservationId());  //질문거리 !!
+            reservation.setPayId(paymentCancelled.getPayId());  //질문거리 !!
             reservation.setReservationStatus("취소됨");
             repository().save(reservation);
 

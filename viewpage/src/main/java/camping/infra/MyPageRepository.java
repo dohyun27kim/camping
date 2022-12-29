@@ -9,6 +9,9 @@ import java.util.List;
 public interface MyPageRepository extends PagingAndSortingRepository<MyPage, Long> {
 
     List<MyPage> findByReservationId(Long reservationId);
+    List<MyPage> findByPayId(Long payId);
+    List<MyPage> findByCampsiteId(Long campsiteId);
+    List<MyPage> deleteByReservationId(Long reservationId);
 
     
 

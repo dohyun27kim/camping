@@ -43,6 +43,12 @@ public class Payment  {
     
     
     private String paymentStatus;
+    
+    
+    
+    
+    
+    private Long customerId;
 
     @PostPersist
     public void onPostPersist(){
@@ -51,6 +57,9 @@ public class Payment  {
         PaymentApproved paymentApproved = new PaymentApproved(this);
         paymentApproved.publishAfterCommit();
 
+    }
+    @PostUpdate
+    public void onPostUpdate(){
 
 
         PaymentCancelled paymentCancelled = new PaymentCancelled(this);

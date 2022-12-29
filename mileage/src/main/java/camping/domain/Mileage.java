@@ -45,6 +45,9 @@ public class Mileage  {
         MileageSaved mileageSaved = new MileageSaved(this);
         mileageSaved.publishAfterCommit();
 
+    }
+    @PostRemove
+    public void onPostRemove(){
 
 
         MileageDeleted mileageDeleted = new MileageDeleted(this);

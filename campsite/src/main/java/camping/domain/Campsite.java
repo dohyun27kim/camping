@@ -106,7 +106,7 @@ public class Campsite  {
         repository().findById(reservationConfirmed.getCampsiteId()).ifPresent(campsite->{
             
             //campsite // do something
-            //campsite.setCampsiteId(reservationConfirmed.getCampsiteId());
+            campsite.setCampsiteId(reservationConfirmed.getCampsiteId());
             campsite.setCampsiteStatus("예약됨");
             repository().save(campsite);
          });
@@ -133,7 +133,7 @@ public class Campsite  {
         repository().findById(reservationCancelled.getCampsiteId()).ifPresent(campsite->{
             
             //campsite // do something
-            //campsite.setCampsiteId(reservationCancelled.getCampsiteId());
+            campsite.setCampsiteId(reservationCancelled.getCampsiteId());
             campsite.setCampsiteStatus("예약가능");
             repository().save(campsite);
          });

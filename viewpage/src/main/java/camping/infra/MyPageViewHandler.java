@@ -40,6 +40,27 @@ public class MyPageViewHandler {
     }
 
     @StreamListener(KafkaProcessor.INPUT)
+    public void whenPaymentApproved_then_CREATE_2(
+        @Payload PaymentApproved paymentApproved
+    ) {
+        try {
+            if (!paymentApproved.validate()) return;
+
+            // view 객체 생성
+            MyPage myPage = new MyPage();
+            // view 객체에 이벤트의 Value 를 set 함
+            myPage.setPayId(paymentApproved.getPayId());
+            myPage.setCustomerId(paymentApproved.getCustomerId());
+            myPage.setReservationId(paymentApproved.getReservationId());
+            myPage.setPaymentStatus(paymentApproved.getPaymentStatus());
+            // view 레파지 토리에 save
+            myPageRepository.save(myPage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @StreamListener(KafkaProcessor.INPUT)
     public void whenReservationConfirmed_then_UPDATE_1(
         @Payload ReservationConfirmed reservationConfirmed
     ) {
@@ -55,6 +76,7 @@ public class MyPageViewHandler {
                 myPage.setReservationStatus(
                     reservationConfirmed.getReservationStatus()
                 );
+                myPage.setPayId(reservationConfirmed.getPayId());
                 // view 레파지 토리에 save
                 myPageRepository.save(myPage);
             }
@@ -64,43 +86,19 @@ public class MyPageViewHandler {
     }
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void whenCampsiteRegistered_then_UPDATE_2(
-        @Payload CampsiteRegistered campsiteRegistered
+    public void whenCampsiteReserved_then_UPDATE_2(
+        @Payload CampsiteReserved campsiteReserved
     ) {
         try {
-            if (!campsiteRegistered.validate()) return;
+            if (!campsiteReserved.validate()) return;
             // view 객체 조회
 
             List<MyPage> myPageList = myPageRepository.findByCampsiteId(
-                campsiteRegistered.getCampsiteId()
+                campsiteReserved.getCapsiteId()
             );
             for (MyPage myPage : myPageList) {
                 // view 객체에 이벤트의 eventDirectValue 를 set 함
-                myPage.setCampsiteStatus(
-                    campsiteRegistered.getCampsiteStatus()
-                );
-                // view 레파지 토리에 save
-                myPageRepository.save(myPage);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @StreamListener(KafkaProcessor.INPUT)
-    public void whenPaymentApproved_then_UPDATE_3(
-        @Payload PaymentApproved paymentApproved
-    ) {
-        try {
-            if (!paymentApproved.validate()) return;
-            // view 객체 조회
-
-            List<MyPage> myPageList = myPageRepository.findByPayId(
-                paymentApproved.getPayId()
-            );
-            for (MyPage myPage : myPageList) {
-                // view 객체에 이벤트의 eventDirectValue 를 set 함
-                myPage.setPayId(paymentApproved.getPayId());
+                myPage.setCampsiteStatus(campsiteReserved.getCompsiteStatus());
                 // view 레파지 토리에 save
                 myPageRepository.save(myPage);
             }

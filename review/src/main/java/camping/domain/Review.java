@@ -51,11 +51,17 @@ public class Review  {
         ReviewRegistered reviewRegistered = new ReviewRegistered(this);
         reviewRegistered.publishAfterCommit();
 
+    }
+    @PostRemove
+    public void onPostRemove(){
 
 
         ReviewDeleted reviewDeleted = new ReviewDeleted(this);
         reviewDeleted.publishAfterCommit();
 
+    }
+    @PreRemove
+    public void onPreRemove(){
     }
 
     public static ReviewRepository repository(){

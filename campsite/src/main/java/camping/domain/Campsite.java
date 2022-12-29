@@ -2,9 +2,9 @@ package camping.domain;
 
 import camping.domain.CampsiteRegistered;
 import camping.domain.CampsiteModified;
-import camping.domain.CampsiteDeleted;
 import camping.domain.CampsiteReserved;
 import camping.domain.CampsiteCancelled;
+import camping.domain.CampsiteDeleted;
 import camping.CampsiteApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -60,15 +60,13 @@ public class Campsite  {
         CampsiteRegistered campsiteRegistered = new CampsiteRegistered(this);
         campsiteRegistered.publishAfterCommit();
 
+    }
+    @PostUpdate
+    public void onPostUpdate(){
 
 
         CampsiteModified campsiteModified = new CampsiteModified(this);
         campsiteModified.publishAfterCommit();
-
-
-
-        CampsiteDeleted campsiteDeleted = new CampsiteDeleted(this);
-        campsiteDeleted.publishAfterCommit();
 
 
 
@@ -80,6 +78,17 @@ public class Campsite  {
         CampsiteCancelled campsiteCancelled = new CampsiteCancelled(this);
         campsiteCancelled.publishAfterCommit();
 
+    }
+    @PostRemove
+    public void onPostRemove(){
+
+
+        CampsiteDeleted campsiteDeleted = new CampsiteDeleted(this);
+        campsiteDeleted.publishAfterCommit();
+
+    }
+    @PreRemove
+    public void onPreRemove(){
     }
 
     public static CampsiteRepository repository(){

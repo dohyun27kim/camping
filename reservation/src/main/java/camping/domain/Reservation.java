@@ -57,6 +57,12 @@ public class Reservation  {
     
     
     private Date toDate;
+    
+    
+    
+    
+    
+    private Long customerId;
 
     @PostPersist
     public void onPostPersist(){
@@ -74,6 +80,9 @@ public class Reservation  {
         ReservationCreated reservationCreated = new ReservationCreated(this);
         reservationCreated.publishAfterCommit();
 
+    }
+    @PostUpdate
+    public void onPostUpdate(){
 
 
         ReservationCancelRequested reservationCancelRequested = new ReservationCancelRequested(this);
@@ -89,6 +98,9 @@ public class Reservation  {
         ReservationCancelled reservationCancelled = new ReservationCancelled(this);
         reservationCancelled.publishAfterCommit();
 
+    }
+    @PreRemove
+    public void onPreRemove(){
     }
 
     public static ReservationRepository repository(){

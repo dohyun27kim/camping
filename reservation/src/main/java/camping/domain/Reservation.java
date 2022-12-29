@@ -117,6 +117,14 @@ public class Reservation  {
 
          });
         */
+        repository().findById(paymentApproved.getReservationId()).ifPresent(reservation->{
+            
+            //reservation // do something
+            reservation.setPayId(paymentApproved.getPayId());
+            reservation.setReservationStatus("결재됨");
+            repository().save(reservation);
+
+         });
 
         
     }
@@ -139,6 +147,15 @@ public class Reservation  {
          });
         */
 
+
+        repository().findById(paymentCancelled.getReservationId()).ifPresent(reservation->{
+            
+            //reservation // do something
+            reservation.setPayId(paymentCancelled.getPayId());
+            reservation.setReservationStatus("취소됨");
+            repository().save(reservation);
+
+         });        
         
     }
 

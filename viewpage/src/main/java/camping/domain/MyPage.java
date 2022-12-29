@@ -7,9 +7,9 @@ import lombok.Data;
 
 
 @Entity
-@Table(name="CampingView_table")
+@Table(name="MyPage_table")
 @Data
-public class CampingView {
+public class MyPage {
 
         @Id
         //@GeneratedValue(strategy=GenerationType.AUTO)
@@ -20,6 +20,7 @@ public class CampingView {
         private String reservationStatus;
         private Long payId;
         private String paymentStatus;
+        private Long customerId;
 
 
 }

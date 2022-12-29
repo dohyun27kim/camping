@@ -2,7 +2,7 @@
 
     <v-card outlined>
         <v-card-title>
-            CampingView # {{$route.params.id }}
+            MyPage # {{$route.params.id }}
         </v-card-title>
 
         <v-card-text>
@@ -27,6 +27,9 @@
             <div>
                 <String label="PaymentStatus" v-model="item.paymentStatus" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
     </v-card>
 
@@ -36,7 +39,7 @@
   const axios = require('axios').default;
 
   export default {
-    name: 'CampingViewViewDetail',
+    name: 'MyPageViewDetail',
     props: {
       value: Object,
     },
@@ -45,7 +48,7 @@
     }),
     async created() {
       var params = this.$route.params;
-      var temp = await axios.get(axios.fixUrl('/campingViews/' + params.id))
+      var temp = await axios.get(axios.fixUrl('/myPages/' + params.id))
 
       this.item = temp.data;
 

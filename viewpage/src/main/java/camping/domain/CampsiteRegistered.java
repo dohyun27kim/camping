@@ -6,7 +6,7 @@ import java.util.*;
 
 
 @Data
-public class CampsiteModified extends AbstractEvent {
+public class CampsiteRegistered extends AbstractEvent {
 
     private Long campsiteId;
     private String campsiteStatus;

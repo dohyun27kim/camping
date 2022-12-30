@@ -92,25 +92,35 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 참조 : 게이트웨이 https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#gateway-2022
        Ingress https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#ops-ingress
 ----
-7. Deploy / Pipeline
-참조 : 
+7. Deploy / Pipeline -> Deploy
+
+![image](https://user-images.githubusercontent.com/67825670/210027247-2fac6f64-64fb-4ebe-82d2-1e65584dbe7c.png)
+
+![image](https://user-images.githubusercontent.com/67825670/210027299-4e07375e-5479-4cd4-aa36-79dcdf6cc419.png)
+
+
 ----
 8. Autoscale (HPA)
+ 
 참고 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#ops-autoscale
 
 ----
 9. Zero-downtime deploy (Readiness probe)
-참조 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/ops-readiness
+ 
+ 참조 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/ops-readiness
 
 ----
 10. Persistence Volume/ConfigMap/Secret
+
 참조 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/ops-persistence-volume-efs
 
 ----
 11. Self-healing (liveness probe)
+ 
 참조 : 
 
 ----
 12. Loggregation / Monitoring
+ 
 참조 : 
 ----

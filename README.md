@@ -64,12 +64,14 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 ![image](https://user-images.githubusercontent.com/67825670/209937040-c7e14972-c5be-48e5-8789-032d5605b075.png)
 
 수정한 소스 코드
+
 ![image](https://user-images.githubusercontent.com/117260810/210023860-3b1f7e36-0b79-4c20-baa0-06ba4f9b02c7.png)
 
 ----
 2. CQRS
 
 ![image](https://user-images.githubusercontent.com/67825670/210024717-00c9f254-c025-44ac-a3ba-1f37fbbd0d46.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210024764-56ec3096-3058-41aa-a41b-b88162f8fe0f.png)
 
 ----
@@ -91,6 +93,7 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 6. Gateway / Ingress
 
 ![image](https://user-images.githubusercontent.com/117251808/210033803-44c05079-7c4b-447c-8ed5-6d4946c3ced3.png)
+
 ![image](https://user-images.githubusercontent.com/117251808/210033782-e8e8bbda-5544-4588-bd87-6c05c6bef2fd.png)
 
 ----
@@ -105,18 +108,26 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 8. Autoscale (HPA)
  
 ![image](https://user-images.githubusercontent.com/67825670/210035482-9eb7e89b-c8e0-4583-bf0e-a3d7d7d47f7f.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210037015-714764d4-c564-4f74-9c80-50cca3eeb2fd.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210037039-b92be727-08ec-45b1-af54-f8ffb65f5318.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210037054-0e0cfa67-41cf-4073-8d89-b3fa16a2faf4.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210037418-0f3c8bf4-cd00-4060-9ee2-f77b4c0282ae.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210037440-95eaa51f-60ba-4505-9c9a-f64c8a501852.png)
  
 
 
 ----
 9. Zero-downtime deploy (Readiness probe)
+
 ![image](https://user-images.githubusercontent.com/67825670/210039827-06371dfe-7fc2-49f6-9235-936fd5c6cbac.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210039854-0a0b1a5c-317e-40d4-81f0-ff32e8d0bd75.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210039882-36608b00-a8ea-402a-9100-a997011a9f0a.png)
 
 
@@ -130,7 +141,9 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 11. Self-healing (liveness probe)
 
 ![image](https://user-images.githubusercontent.com/67825670/210038796-a5fcd1a2-45e5-4eba-9ec6-e6d940546bfb.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210038822-0cd9f705-c921-4c5a-a371-e9db1e63a869.png)
+
 ![image](https://user-images.githubusercontent.com/67825670/210038846-4670c678-f77e-4838-a72a-672555d79f29.png)
 
 

@@ -135,6 +135,9 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 ----
 10. Persistence Volume/ConfigMap/Secret
 
+![image](https://user-images.githubusercontent.com/67825670/210042798-2754b899-e298-40a1-b924-aebc484a20a5.png)
+
+
 
 
 ----

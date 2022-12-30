@@ -72,5 +72,40 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 ![image](https://user-images.githubusercontent.com/67825670/210024717-00c9f254-c025-44ac-a3ba-1f37fbbd0d46.png)
 ![image](https://user-images.githubusercontent.com/67825670/210024764-56ec3096-3058-41aa-a41b-b88162f8fe0f.png)
 
+----
+3. Compensation & Correlation
 
+결제취소시 예약취소,캠프사이트 예약가능으로 변경
 
+![image](https://user-images.githubusercontent.com/67825670/210025571-fee6018c-3677-4f98-8766-16a95a8d0d0c.png)
+
+![image](https://user-images.githubusercontent.com/67825670/210025701-2595f8cb-f7cd-4d14-a5e6-ead74ebaa2a4.png)
+
+![image](https://user-images.githubusercontent.com/67825670/210025719-8bef8630-796d-4a3f-b70c-697c86df8bc8.png)
+
+----
+
+5. Circuit Breaker
+
+----
+6. Gateway / Ingress
+
+----
+7. Deploy / Pipeline
+
+----
+8. Autoscale (HPA)
+
+----
+9. Zero-downtime deploy (Readiness probe)
+
+----
+10. Persistence Volume/ConfigMap/Secret
+
+----
+11. Self-healing (liveness probe)
+
+----
+12. Loggregation / Monitoring
+
+----

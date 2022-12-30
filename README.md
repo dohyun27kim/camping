@@ -67,6 +67,10 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 ![image](https://user-images.githubusercontent.com/117260810/210023860-3b1f7e36-0b79-4c20-baa0-06ba4f9b02c7.png)
 
 ----
+2. CQRS
+
+![image](https://user-images.githubusercontent.com/67825670/210024717-00c9f254-c025-44ac-a3ba-1f37fbbd0d46.png)
+![image](https://user-images.githubusercontent.com/67825670/210024764-56ec3096-3058-41aa-a41b-b88162f8fe0f.png)
 
 
 

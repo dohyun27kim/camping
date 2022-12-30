@@ -48,7 +48,8 @@
 
 
 # 구현:
-PUB/SUB, REQ/RES 테스트 결과
+
+1. SAGA (PUB/SUB) 4. REQ/RES 테스트 결과
 
 campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것을 확인함
 

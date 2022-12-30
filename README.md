@@ -115,7 +115,10 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 
 ----
 9. Zero-downtime deploy (Readiness probe)
- 
+![image](https://user-images.githubusercontent.com/67825670/210039827-06371dfe-7fc2-49f6-9235-936fd5c6cbac.png)
+![image](https://user-images.githubusercontent.com/67825670/210039854-0a0b1a5c-317e-40d4-81f0-ff32e8d0bd75.png)
+![image](https://user-images.githubusercontent.com/67825670/210039882-36608b00-a8ea-402a-9100-a997011a9f0a.png)
+
 
 
 ----

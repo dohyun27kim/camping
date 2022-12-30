@@ -158,3 +158,4 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 12. Loggregation / Monitoring
 
 ----
+![image](https://user-images.githubusercontent.com/117137880/210045877-0e8d68a6-b8ff-4547-88ca-bfd79c7e2c55.png)

@@ -91,6 +91,9 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 6. Gateway / Ingress
 참조 : 게이트웨이 https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#gateway-2022
        Ingress https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#ops-ingress
+![image](https://user-images.githubusercontent.com/117251808/210033803-44c05079-7c4b-447c-8ed5-6d4946c3ced3.png)
+![image](https://user-images.githubusercontent.com/117251808/210033782-e8e8bbda-5544-4588-bd87-6c05c6bef2fd.png)
+
 ----
 7. Deploy / Pipeline -> Deploy
 

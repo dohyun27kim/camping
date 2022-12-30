@@ -107,7 +107,7 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 ----
 9. Zero-downtime deploy (Readiness probe)
  
- 참조 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/ops-readiness
+참조 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/ops-readiness
 
 ----
 10. Persistence Volume/ConfigMap/Secret
@@ -116,11 +116,9 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 
 ----
 11. Self-healing (liveness probe)
- 
-참조 : 
+
 
 ----
 12. Loggregation / Monitoring
- 
-참조 : 
+
 ----

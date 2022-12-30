@@ -139,6 +139,7 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 
 ![image](https://user-images.githubusercontent.com/67825670/210042854-1cfd765c-373b-4af1-88a6-bd1d9b188c7c.png)
 
+![image](https://user-images.githubusercontent.com/67825670/210042905-75384083-8045-4b83-90f2-a75d8ef834cf.png)
 
 
 ----

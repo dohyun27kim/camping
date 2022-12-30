@@ -87,19 +87,16 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 
 5. Circuit Breaker 
 참조 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/circuit-breaker-2022
-
 ----
 6. Gateway / Ingress
-참조 : 
-
-
+참조 : 게이트웨이 https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#gateway-2022
+       Ingress https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#ops-ingress
 ----
 7. Deploy / Pipeline
 참조 : 
-
-
 ----
 8. Autoscale (HPA)
+참고 : https://labs.msaez.io/#/courses/cna-full/32c3e5c0-7cd9-11ed-b37b-0b0e73d05d98/#ops-autoscale
 
 ----
 9. Zero-downtime deploy (Readiness probe)
@@ -111,8 +108,9 @@ campsite - reservation - payment가 kafka와 req/res 를 타고 변경되는것�
 
 ----
 11. Self-healing (liveness probe)
+참조 : 
 
 ----
 12. Loggregation / Monitoring
-
+참조 : 
 ----

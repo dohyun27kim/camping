@@ -47,7 +47,7 @@
 ![image](https://user-images.githubusercontent.com/117260810/209923025-e96128d3-112a-41f8-8863-90fa490ecf45.png)
 
 
-# 구현:
+# 구현/운영
 
 1. SAGA (PUB/SUB) 4. REQ/RES 테스트 결과
 
